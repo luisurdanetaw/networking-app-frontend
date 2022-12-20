@@ -1,0 +1,17 @@
+<app-navbar-student></app-navbar-student>
+<div class="my-5 py-4">
+  <h4 class="ms-4 my-4"> Job Postings</h4>
+  <div *ngFor="let job of jobs" class="card mx-2 mb-3">
+    <h4 class="card-header">{{job.position}} </h4>
+    <div class="card-body">
+      <h5 class="card-title">Employer: {{job.employerName}}</h5>
+      <p>Job ID: {{job.id}}</p>
+      <hr>
+      <p>Pay: {{job.pay}}</p>
+      <p>Location: {{job.location}}</p>
+      <p>Description: {{job.description}} </p>
+      <button class="btn btn-primary" (click)="onApply(job.id)">Apply</button>
+    </div>
+  </div>
+</div>
+

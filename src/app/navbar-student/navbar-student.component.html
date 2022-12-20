@@ -1,0 +1,27 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand ms-5 font-weight-bold" href="#" style="color:dodgerblue; font-weight:500;">Cashify</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/jobs">Jobs</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/applications">Applications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/connections">Connections</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 ms-auto me-5">
+      <input type="text" name="employerName" class="btn me-1" [(ngModel)]="employerName" placeholder="Search Employers" aria-label="Search Employers" style="border-color: grey;">
+      <button class="btn btn-outline-success my-2" type="submit" (click)="onSearch()">Search</button>
+    </form>
+  </div>
+</nav>

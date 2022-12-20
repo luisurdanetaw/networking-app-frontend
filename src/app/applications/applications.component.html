@@ -1,0 +1,15 @@
+<app-navbar-student></app-navbar-student>
+<div *ngIf="hasApplications; else empty" class="my-5 py-4">
+  <h4 class="ms-4 my-4"> Applications</h4>
+  <div *ngFor="let application of applications" class="card mx-2 mb-3">
+    <h4 class="card-header">Application Id: {{application.id}} </h4>
+    <div class="card-body">
+      <h5 class="card-title">Job Id: {{application.jobId}}</h5>
+      <p>Student Email: {{this.userEmail}}</p>
+    </div>
+  </div>
+</div>
+<ng-template #empty>
+  <div class="mt-5">separator</div>
+  <h4 class="ms-5 my-5"> You have no submitted applications.</h4>
+</ng-template>

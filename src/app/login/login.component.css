@@ -1,0 +1,17 @@
+html, body{
+  height: 100vh;
+}
+
+#left{
+  display: flex;
+  height: 100%;
+  background-color: dodgerblue;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  color: white;
+}
+
+#sign-up{
+  display: inline-block;
+}

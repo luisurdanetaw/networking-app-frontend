@@ -1,0 +1,73 @@
+<div class="row h-100">
+
+  <div class="col-6 my-auto" id="left">
+    <h1 class="my-2 ms-5 ps-5 mt-auto">Cashify</h1>
+    <p class="ms-5 mt-3 mb-1 ps-5">Innovation starts with you...</p>
+    <p class="mb-3 ms-5 ps-5"><small>Already have an account?</small></p>
+    <span class="mb-auto ms-5 ps-5">
+        <button class="btn btn-outline-light" id="log-in" (click)="onClickLogInButton()">Log In</button>
+      </span>
+  </div>
+
+  <div class="col-6 text-center my-auto" id="right">
+    <h1>Create Account</h1>
+    <div class="row">
+      <form>
+        <div class="form-group text-start mx-5 mt-3 mb-3">
+          <label for="email">I'm a...</label>
+          <div>
+            <select name="userType" class="form-control" #select (change)="onSelectionChange(select.value)">
+              <option value="Student">Student</option>
+              <option value="Employer">Employer</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="form-group text-start mx-5">
+          <label for="username">Username</label>
+          <input type="username" class="form-control" id="username" placeholder="Username" [(ngModel)]="username" name="username">
+        </div>
+        <div class="form-group text-start mx-5 mt-3 mb-3">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="example@email.com" [(ngModel)]="email" name="email">
+        </div>
+        <div class="form-group text-start mx-5 mt-3 mb-3">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="password" [(ngModel)]="password" name="password">
+        </div>
+        <div class="form-group text-start mx-5 mt-3 mb-3">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Display name" [(ngModel)]="name" name="name">
+        </div>
+        <div *ngIf="student">
+          <div class="form-group text-start mx-5 mt-3 mb-3">
+            <label for="university">University</label>
+            <input type="text" class="form-control" id="university" placeholder="University" [(ngModel)]="university" name="university">
+          </div>
+          <div class="form-group text-start mx-5 mt-3 mb-3">
+            <label for="major">Major</label>
+            <input type="text" class="form-control" id="major" placeholder="Major" [(ngModel)]="major" name="major">
+          </div>
+          <div class="form-group text-start mx-5 mt-3 mb-3">
+            <label for="gpa">GPA</label>
+            <input type="number" class="form-control" id="gpa" placeholder="GPA" [(ngModel)]="gpa" name="gpa">
+          </div>
+        </div>
+        <div *ngIf="employer">
+          <div class="form-group text-start mx-5 mt-3 mb-3">
+            <label for="industry">Industry</label>
+            <input type="text" class="form-control" id="industry" placeholder="Industry" [(ngModel)]="industry" name="industry">
+          </div>
+          <div class="form-group text-start mx-5 mt-3 mb-3">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" placeholder="Location" [(ngModel)]="location" name="location">
+          </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary mt-4" (click)="onClickRegisterButton()">Register</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
